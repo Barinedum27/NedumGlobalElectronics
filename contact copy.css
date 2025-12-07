@@ -1,0 +1,159 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px 0 0 30px;
+}
+
+header img {
+    width: 15%;
+    height: auto;
+    padding-left: 40px;
+}
+
+.contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    /* padding-left: 200px; */
+}
+
+.contact-links {
+    padding-right: 200px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    justify-content: space-between
+    
+}
+
+.contact-links a {
+    padding: 10px;
+    font-family: monospace;
+    font-size: large;
+    color: black;
+}
+
+.contact-links a:visited {
+    color: black;
+}
+
+.contact-links a:hover{
+    color: rgb(48, 46, 46); 
+}
+
+h1 {
+    color: rgb(11, 11, 61);
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 35px;
+    padding-left: 65px;
+}
+
+.lets {
+    height: 100px;
+    width: 600px;
+    background-color: rgb(11, 11, 61);
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 67px;
+}
+
+.lets h2 {
+    padding: 20px 0 5px 40px;
+    
+}
+
+section h2 {
+    color: rgb(11, 11, 61);
+    padding-left: 65px;
+    padding-top: 20px;
+}
+
+form {
+    padding: 4px 0 0 65px;
+}
+
+.name {
+    padding: 5px 20px 5px 20px;
+}
+
+.email {
+  padding: 5px 20px 5px 20px;   
+}
+
+.message {
+    padding: 5px 20px 5px 20px;
+}
+
+
+button {
+   padding: 6px 59px 6px 59px;
+   color: #fff;
+   background-color: rgb(11, 11, 61);
+   border: 1px solid black;
+   border-radius: 5px;
+}
+
+.touch {
+    display: grid;
+    gap: 10px;
+}
+
+.contacts {
+    grid-column: 2;
+    color: rgb(11, 11, 61);
+    font-size: larger;
+}
+
+.contacts {
+    padding: 20px 635px 0 0;
+}
+
+.contacts p {
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(11, 11, 61);
+    margin-top: 130px;
+}
+
+footer img {
+    width: 16%;
+    height: auto;
+    padding: 50px 0 0 80px;
+}
+
+.footer-links  ul {
+    display: flex;
+    list-style: none;
+    padding-right: 200px;
+    justify-content: space-around;
+}
+
+.footer-links a :visited {
+    color: #fff;
+}
+
+.footer-links a {
+    padding: 1opx;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-links a {
+    padding: 10px;
+}
+
+footer p {
+    color: #fff;
+    padding-left: 450px;
+}
+
