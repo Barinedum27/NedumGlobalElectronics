@@ -2,7 +2,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 25px 0 15px 0;
+    padding: 15px 50px;
 }
 
 .homelinks {
@@ -11,21 +11,30 @@ header {
     text-decoration: none;
     list-style: none;
     justify-content: space-evenly;
-    padding-right: 200px;
+    /* padding-right: 200px; */
 }
 
 .homelinks a {
     justify-content: space-between;
     text-decoration: none;
     padding: 10px;
-    font-size: larger;
-    font-weight: 200px;
-    font-weight: 500;
+    font-size: 18px;
+    /* font-weight: 200px; */
+    /* font-weight: 500; */
     color: black;
     font-family: monospace;
 }
 
 .homelinks a:visited {
+    color: black;
+}
+
+form input {
+    font-size: 16px;
+    padding: 6px 15px;
+}
+
+input::placeholder {
     color: black;
 }
 
@@ -36,7 +45,7 @@ header {
 .logo {
     width: 10%;
     height: auto;
-    padding-left: 100px;
+    /* padding-left: 100px; */
 }
 
 .global {
@@ -195,3 +204,234 @@ button a :visited {
 
 
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+/* Header adjustments */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* Searchbar adjustments */
+.searchbar {
+    margin-left: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+        display: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar.active {
+        display: flex;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    .homelinks {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    
+    .homelinks li {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .homelinks a {
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .searchbar {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .searchbar input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Logo adjustment for mobile */
+    .logo {
+        width: 15%;
+        min-width: 80px;
+    }
+    
+    /* Global section adjustments for mobile */
+    .global {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    
+    .global h1 {
+        padding: 40px 20px 20px 20px;
+        font-size: 1.8rem;
+    }
+    
+    .global p {
+        padding: 0 20px 20px 20px;
+    }
+    
+    .global button {
+        margin: 20px auto;
+    }
+    
+    .tv {
+        width: 60%;
+        height: auto;
+        margin: 20px auto;
+        max-width: 300px;
+    }
+    
+    /* Brands section adjustments */
+    .brands {
+        padding: 30px 20px 0 20px;
+        text-align: center;
+    }
+    
+    .brands-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .brands-logos img {
+        width: 20%;
+        min-width: 120px;
+    }
+    
+    /* Featured products adjustments */
+    .featured {
+        padding: 30px 20px 0 20px;
+        text-align: center;
+    }
+    
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    
+    .frig, .frig2 {
+        width: 100%;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    .footer > div {
+        margin-bottom: 30px;
+    }
+    
+    .footer-left {
+        align-items: center;
+    }
+    
+    .logo1 {
+        padding-right: 0;
+        padding-top: 20px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .products {
+        grid-template-columns: 1fr;
+    }
+    
+    .brands-logos img {
+        width: 40%;
+        margin: 10px;
+    }
+    
+    .hamburger {
+        font-size: 20px;
+    }
+}
+
+/* Animation for menu dropdown */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hamburger icon animation */
+.hamburger.active i {
+    animation: rotate 0.3s ease-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}

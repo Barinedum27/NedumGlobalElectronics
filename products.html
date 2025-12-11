@@ -3,56 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="products.css">
+    <title>Products - Nedum Global Electronics</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header>
         <img src="img/LOG 2.png" alt="" class="logo">
+        
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+        <nav class="navbar" id="navbar">
+            <ul class="homelinks">
+               <li><a href="index.html">HOME</a></li>
+               <li><a href="about.html">ABOUT</a></li>
+               <li><a href="products.html">PRODUCTS</a></li>
+               <li><a href="contact.html">CONTACT</a></li>
             </ul>
+            <div class="searchbar">
+                <form action="">
+                    <input type="search" id="searchbar" placeholder="Search Item">
+                </form>
+            </div>
         </nav>
-
-        <input type="search">
     </header>
-
-    <main>
-        <div class="ourbrands">
-          <h1>Our Products</h1>
-          <p>Browse top-quality electronics from trustd brands.</p>
-        </div>
-
-        <div class="products">
-            <nav>
-                <ul>
-                    <li><a href="tvs.html">TVs</a></li>
-                    <li><a href="refrigerators.html">Refrigerators</a></li>
-                    <li><a href="chillers.html">Chillers</a></li>
-                    <li><a href="ac.html">Air Conditioners</a></li>
-                    <li><a href="generators.html">Generators</a></li>
-                    <li><a href="freezers.html">Freezers</a></li>
-                    <li><a href="wm.html">Washing Machines</a></li>
-                    <li><a href="audio.html">Audio Systems</a></li>
-                    <li><a href="fans.html">Fans</a></li>
-                    <li><a href="microwave.html">Microwaves</a></li>
-                    <li><a href="airfryers.html">Air Fryers</a></li>
-                    <li><a href="ice.html">Ice Maker</a></li>
-                    <li><a href="dispensers.html">Water Dispensers</a></li>
-                    <li><a href="heaters.html">Water Heaters</a></li>
-                    <li><a href="blenders.html">Blenders</a></li>
-                    <li><a href="gas.html">Gas Cookers</a></li>
-                    <li><a href="ovens.html">Electric Ovens</a></li>
-                    <li><a href="extractors.html">Extractor Hoods</a></li>
-
-                </ul>
-            </nav>
+    
+    <main class="products-container">
+        <div class="page-title">
+            <h1>OUR PRODUCTS</h1>
         </div>
         
+        <div class="products-layout">
+            <!-- Left Sidebar for Brands/Categories -->
+            <aside class="products-sidebar">
+                <div class="sidebar-header">
+                    <h2>CATEGORIES</h2>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="#" class="category-link active" data-category="all">All Products</a></li>
+                        <li><a href="#" class="category-link" data-category="tvs">TVs</a></li>
+                        <li><a href="#" class="category-link" data-category="refrigerators">Refrigerators</a></li>
+                        <li><a href="#" class="category-link" data-category="chillers">Chillers</a></li>
+                        <li><a href="#" class="category-link" data-category="ac">Air Conditioners</a></li>
+                        <li><a href="#" class="category-link" data-category="generators">Generators</a></li>
+                        <li><a href="#" class="category-link" data-category="freezers">Freezers</a></li>
+                        <li><a href="#" class="category-link" data-category="wm">Washing Machines</a></li>
+                        <li><a href="#" class="category-link" data-category="audio">Audio Systems</a></li>
+                        <li><a href="#" class="category-link" data-category="fans">Fans</a></li>
+                        <li><a href="#" class="category-link" data-category="microwave">Microwaves</a></li>
+                        <li><a href="#" class="category-link" data-category="airfryers">Air Fryers</a></li>
+                        <li><a href="#" class="category-link" data-category="ice">Ice Maker</a></li>
+                        <li><a href="#" class="category-link" data-category="dispensers">Water Dispensers</a></li>
+                        <li><a href="#" class="category-link" data-category="heaters">Water Heaters</a></li>
+                        <li><a href="#" class="category-link" data-category="blenders">Blenders</a></li>
+                        <li><a href="#" class="category-link" data-category="gas">Gas Cookers</a></li>
+                        <li><a href="#" class="category-link" data-category="ovens">Electric Ovens</a></li>
+                        <li><a href="#" class="category-link" data-category="extractors">Extractor Hoods</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <!-- Right side for Products Display -->
+            <section class="products-display">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be displayed here dynamically -->
+                    <div class="product-item" data-category="tvs">
+                        <img src="img/tv1.jpg" alt="Smart TV">
+                        <h3>55" 4K Smart TV</h3>
+                        <p>Ultra HD Smart Television with HDR</p>
+                        <span class="price">$499.99</span>
+                    </div>
+                    
+                    <div class="product-item" data-category="refrigerators">
+                        <img src="img/fridge1.jpg" alt="Refrigerator">
+                        <h3>French Door Refrigerator</h3>
+                        <p>25 cu.ft. Energy Star Rated</p>
+                        <span class="price">$1,299.99</span>
+                    </div>
+                    
+                    <div class="product-item" data-category="ac">
+                        <img src="img/ac1.jpg" alt="Air Conditioner">
+                        <h3>1.5 Ton Inverter AC</h3>
+                        <p>Energy Efficient Split AC</p>
+                        <span class="price">$699.99</span>
+                    </div>
+                    
+                    <div class="product-item" data-category="generators">
+                        <img src="img/generator1.jpg" alt="Generator">
+                        <h3>5.5KVA Generator</h3>
+                        <p>Portable Power Generator</p>
+                        <span class="price">$899.99</span>
+                    </div>
+                    
+                    <div class="product-item" data-category="wm">
+                        <img src="img/washing1.jpg" alt="Washing Machine">
+                        <h3>Front Load Washer</h3>
+                        <p>8KG Capacity Washing Machine</p>
+                        <span class="price">$549.99</span>
+                    </div>
+                    
+                    <div class="product-item" data-category="audio">
+                        <img src="img/audio1.jpg" alt="Audio System">
+                        <h3>Home Theater System</h3>
+                        <p>5.1 Channel Surround Sound</p>
+                        <span class="price">$399.99</span>
+                    </div>
+                    
+                    <div class="product-item" data-category="microwave">
+                        <img src="img/microwave1.jpg" alt="Microwave">
+                        <h3>25L Convection Microwave</h3>
+                        <p>Multi-function Microwave Oven</p>
+                        <span class="price">$199.99</span>
+                    </div>
+                    
+                    <div class="product-item" data-category="airfryers">
+                        <img src="img/airfryer1.jpg" alt="Air Fryer">
+                        <h3>Digital Air Fryer</h3>
+                        <p>5QT Capacity with Touch Controls</p>
+                        <span class="price">$129.99</span>
+                    </div>
+                    
+                    <div class="product-item" data-category="blenders">
+                        <img src="img/blender1.jpg" alt="Blender">
+                        <h3>Professional Blender</h3>
+                        <p>1500W High-speed Blender</p>
+                        <span class="price">$89.99</span>
+                    </div>
+                </div>
+                
+                <div class="no-products-message" id="noProductsMessage" style="display: none;">
+                    <p>No products found in this category.</p>
+                </div>
+            </section>
+        </div>
     </main>
+    
+    <!-- JavaScript for hamburger menu and product filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu functionality
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+            
+            hamburger.addEventListener('click', function() {
+                navbar.classList.toggle('active');
+                hamburger.classList.toggle('active');
+                
+                const icon = hamburger.querySelector('i');
+                if (navbar.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close menu when clicking on a link
+            document.querySelectorAll('.homelinks a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navbar.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    const icon = hamburger.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+            
+            // Product filtering functionality
+            const categoryLinks = document.querySelectorAll('.category-link');
+            const productItems = document.querySelectorAll('.product-item');
+            const productsGrid = document.getElementById('productsGrid');
+            const noProductsMessage = document.getElementById('noProductsMessage');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide products based on category
+                    let visibleProducts = 0;
+                    
+                    productItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            visibleProducts++;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Show message if no products in category
+                    if (visibleProducts === 0) {
+                        noProductsMessage.style.display = 'block';
+                        productsGrid.style.display = 'none';
+                    } else {
+                        noProductsMessage.style.display = 'none';
+                        productsGrid.style.display = 'grid';
+                    }
+                });
+            });
+            
+            // Mobile sidebar toggle
+            const mobileToggle = document.querySelector('.mobile-sidebar-toggle');
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    document.querySelector('.products-sidebar').classList.toggle('mobile-active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
