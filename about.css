@@ -1,0 +1,222 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 15px 0;
+}
+
+header img {
+    width: 10%;
+    height: auto;
+    padding-left: 100px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding-right: 200px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a {
+    padding: 10px;
+    font-family: monospace;
+    font-size: larger;
+}
+
+header a:visited {
+    color: black;
+}
+
+header a:hover {
+    color: rgb(48, 46, 46);
+}
+
+.about {
+    background-color: rgb(11, 11, 61);
+    padding: 20px 0 40px 100px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about img {
+    width: 50%;
+    justify-items: right;
+}
+
+.who {
+    padding: 40px 0 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    overflow-x: hidden;
+}
+
+.who h2 {
+    color: rgb(11, 11, 61);
+}
+
+
+.who img {
+    width: 40%;
+    padding-right: 600px;
+    padding-top: 20px;
+}
+
+.why {
+    justify-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: rgb(240, 240, 240);
+    margin-top: 35px;
+}
+
+.why h2 {
+    color: rgb(11, 11, 61);
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    margin-top: 15px;
+}
+
+.feature i {
+    font-size: 32px;
+    color: #0a2540;
+    margin-bottom: 5px;
+    padding-left: 15px;
+
+}
+
+.feature p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+
+.brands-sell {
+    justify-items: center;
+    margin: 35px;
+}
+
+.brands-sell h2 {
+    color: rgb(11, 11, 61);
+}
+
+.wesell {
+    display: flex;
+    justify-items: center;
+    gap: 80px;
+}
+
+.wesell img {
+    width: 15%;
+    height: 15px;
+}
+
+.brands-sell .lg {
+    height: 25px;
+    width: 60px;
+}
+
+.brands-sell button {
+    margin-top: 70px;
+    padding: 10px 53px 10px 53px;
+    border: 1px;
+    border-radius: 5px;
+    background-color: rgb(11, 11, 61);
+    color: #fff;
+}
+
+.brands-sell button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.brands-sell button {
+   transition: shadow 0.3s ease;
+   cursor: pointer;
+}
+
+.brands-sell button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.brands-sell a:visited{
+    color: #fff;
+}
+
+.company .products {
+    margin-right: 50px;
+}
+
+.contact {
+    margin-right: 50px;
+}
+
+.contact p {
+    margin-right: 50px;
+    color: #fff;
+}
+
+.contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact a:visited {
+    color: #fff;
+}
+
+footer .company {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    padding: 30px 0 15px 100px;
+    background-color: rgb(11, 11, 61);
+    color: #fff;
+}
+
+.footerimg {
+    background-color: #fff;
+    justify-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.footerimg div {
+    display: flex;
+    gap: 80px;
+}
+
+.footerimg img {
+    width: 30%;
+    height: 15px;
+}
+
+.footerimg div .lg1 {
+    height: 20px;
+}
+
+.stay {
+    background-color: rgb(11, 11, 61);
+    color: #fff;
+    padding: 30px 0 30px 100px;
+}
+
+.copy {
+    padding-top: 20px;
+}
+
